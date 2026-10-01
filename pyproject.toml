@@ -1,0 +1,21 @@
+[project]
+name = "conditional-rag"
+version = "0.1.0"
+description = "LangGraph conditional workflow example (Conditional RAG) using an OpenRouter free model"
+readme = "README.md"
+authors = [
+    { email = "muntahasayed396@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-openrouter>=0.2.9",
+    "langgraph>=1.2.12",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+conditional-rag = "conditional_rag.conditional_rag:main"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
