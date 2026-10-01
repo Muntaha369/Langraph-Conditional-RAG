@@ -172,7 +172,6 @@ def _ask_llm(prompt: str, retries: int = 6) -> str:
             time.sleep(2 * (attempt + 1))  # 2s, 4s, 6s...
     raise RuntimeError(f"LLM call failed after {retries} attempts: {last_error}")
 
-
 def route_question(state: RAGState) -> RAGState:
     """NODE 1 - the ROUTER / decision maker.
 
